@@ -10,6 +10,8 @@ function Detectar(){
         } else if (numero % 2!=0){
             console.log("es impar");
         }
+    } else {
+        console.log("es cero")
     }
 }
 Detectar();

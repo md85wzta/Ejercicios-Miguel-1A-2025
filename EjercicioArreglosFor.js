@@ -1,15 +1,3 @@
-//me dijeron que había que hacer un ejercicio con un ciclo for y un arreglo y subir el repositorio
-//estaba intentando hacer un justificante con un arreglo pero no me salió lo estaba escribiendo mientras iba en el tren
-//let fuga = ["Yucatán ", "Mérida ", "Caucel", "Dzilbalchatún,", " El Centro", "Tuve que ir a ", " y a las Vaquerías tradicionales del centro", "Por motivos familiares (es enserio)"];
-
-/*console.log(fuga[5,1,0,7] + "durante los días que estuve ahí (como 5 días) tuve que cuidar de mi abuela junto con mi tío Simon que viene de alemania");
-console.log("y también junto con mi tío aprovechamos a ir a: " + (fuga[2, 3, 6]))
-
-for(let i=0;i===8,i++){
-    console.log
-}s
-*/
-
 //usar array y function
 //tal parece que se trata de un bucle que imprima solo los valores pares del arreglo
 function DatosArreglo(){
@@ -22,6 +10,51 @@ function DatosArreglo(){
         }
     }
     console.log(`la suma de todos los datos es ${resultado}`);
+    /* recorrer con for of */
+
+    for(let numeros of Datos)[
+        console.log(`los datos del arreglo son ${Datos[numeros]}`)
+    ]
+
+    /* for in */
+    for(let numeros in Datos){
+        console.log(`los datos son ${Datos[numeros]}`)
+    }
+
+    /* for each */
+    /* console.log("FOR EACH_----------------------")
+    Datos.forEach(function(numeros){
+        console.log(numeros);
+
+    }) */
+    //es lo mismo pero con una funcion anonima.
+    Datos.forEach(numeros=>console.log(numeros))
+
+    //con MAP
+    console.log("map------")
+    Datos.map(numero=>console.log(numero))
+
+    //do while
+    console.log("do while ------------") 
+    let iii = 0
+    do{
+        console.log(Datos[iii]);
+        iii++;
+    }while(iii < Datos.length)
+    
+    //filter
+    console.log("filter ---------------");
+    const newArreglo = Datos.filter(numerit0s =>{
+        return numerit0s<7;
+    })
+    console.log(newArreglo)
+
+    //reduce
+    console.log("reduce ------------")
+    let sumita = 0;
+    Datos.reduce((a,b)=>suma=a+b)
+    console.log(sumita)
+    
 }
 DatosArreglo();
 
