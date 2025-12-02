@@ -10,7 +10,7 @@ let MiPersona = {
     "peso": 66,
 }
 
-console.log(MiPersona.nombre) //imprime el primer dato guardado en el objeto (ya lo sabia pero es repaso)
+console.log(MiPersona.nombre) //muestra el primer dato del obj (ya lo sabia pero es repaso)
 
 //vere si me sale recorrerlo
 
@@ -57,6 +57,8 @@ for (let i = 0; i < arregloDeConocidosObj.length; i++){
     console.log(`y estudia: ${arregloDeConocidosObj[i].estudia}`)
 }
 
+
+
 console.log("===============objeto con arreglo dentro==============")
 //veamos con un objeto con array que "aprendí"
 const ObjArr = {
@@ -67,3 +69,19 @@ const ObjArr = {
 ObjArr.arr.forEach((elemento) => {
     console.log(elemento + "jeje")
 });
+
+//agregar hacer un arreglo dentro de un objeto con datos ingresados por el usuario
+
+const prompt = require("prompt-sync")({sigint:true});
+function agregarDatos(){
+    console.log("===== agrega elementos al objeto =====");
+    let nuevoObjeto = {};
+    nuevoObjeto.nombre = String(prompt("Ingresa el nombre: "));
+    nuevoObjeto.edad = parseInt(prompt("Ingresa la edad: "));
+    nuevoObjeto.estudia = String(prompt("Ingresa la carrera que estudia: "));
+
+    console.log(nuevoObjeto.nombre);
+    console.log(nuevoObjeto);
+}
+
+agregarDatos();
