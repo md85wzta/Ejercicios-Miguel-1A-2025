@@ -26,10 +26,11 @@ function agregarDatos(){
 
     Agenda.push(objetoPersonas);
     
+    /*
     console.log(`===== datos de la persona ${contador} registrada =====`);
     console.log(` hola ${Agenda[contador-1].nombre}, tus datos son:`);
     console.log(Agenda[contador-1]);
-    
+     */
     contador++;
     }
 
